@@ -1,4 +1,4 @@
-@Library("mylib")_
+@Library("mylib@feature1")_
 
 pipeline{
     agent any
