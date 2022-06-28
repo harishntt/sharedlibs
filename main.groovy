@@ -2,10 +2,8 @@
 
 pipeline{
     agent any
-        properties([
-        parameters([
-            githubProjectProperty(displayName: 'repo', 
-                                projectUrlStr: 'https://github.com/harishntt/sharedlibs.git')
+    properties{
+        parameters{
             gitParameter(branch: '', 
                         branchFilter: '.*', 
                         defaultValue: 'dev', 
@@ -16,8 +14,8 @@ pipeline{
                         sortMode: 'NONE', 
                         tagFilter: '*', 
                         type: 'GitParameterDefinition')
-        ])
-    ])
+            }
+    }
 
     stages{
         stage('Test'){
