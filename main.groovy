@@ -2,7 +2,6 @@
 
 pipeline{
     agent any
-    properties{
         parameters{
             gitParameter(branch: '', 
                         branchFilter: '.*', 
@@ -15,7 +14,6 @@ pipeline{
                         tagFilter: '*', 
                         type: 'GitParameterDefinition')
             }
-    }
 
     stages{
         stage('Test'){
